@@ -27,7 +27,7 @@ jobs:
       - name: Install Myanmar Sanpya font
         run: |
           mkdir -p ~/.fonts
-          cp fonts/Myanmar-Sanpya.ttf ~/.fonts/
+          cp fonts/MyanmarSanpya.ttf ~/.fonts/
           fc-cache -f -v
 
       - name: Export slides to HTML and PDF
