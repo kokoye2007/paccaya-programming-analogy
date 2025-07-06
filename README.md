@@ -1,5 +1,7 @@
 # ၂၄ ပစ္စည်း နှင့် Programming Analogy
 
+[![Build and Deploy Marp Slides](https://github.com/kokoye2007/paccaya-programming-analogy/actions/workflows/marp.yml/badge.svg)](https://github.com/kokoye2007/paccaya-programming-analogy/actions/workflows/marp.yml)
+
 ဤစီမံကိန်းသည် ဗုဒ္ဓအဘိဓမ္မာတွင် လာရှိသော ၂၄ ပစ္စည်း ပဋ္ဌာန်းတရားတော်၏ နက်နဲသော သဘောတရားများကို မျက်မှောက်ခေတ် Programmer များ၊ နည်းပညာရှင်များ ပိုမိုနားလည်လွယ်ကူစေရန် Programming Concepts များဖြင့် ယှဉ်တွဲရှင်းလင်းထားသော Open Source Project တစ်ခု ဖြစ်ပါသည်။
 
 This project is an open-source initiative to explain the profound concepts of the 24 Patthana Conditions from Buddhist Abhidhamma by drawing analogies with modern programming concepts, making them more accessible to developers and tech enthusiasts.
