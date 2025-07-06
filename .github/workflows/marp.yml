@@ -19,6 +19,11 @@ jobs:
       - name: Install Marp CLI
         run: npm install -g @marp-team/marp-cli
 
+      - name: Install fonts (Noto Sans + Noto Sans Myanmar)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-color-emoji fonts-noto-unhinted fonts-noto-core fonts-noto-mono fonts-noto-extra fonts-noto-ui-core fonts-noto-ui-extra
+
       - name: Export slides to HTML and PDF
         run: |
           mkdir dist
