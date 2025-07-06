@@ -43,11 +43,20 @@ jobs:
             #  env:
             #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
-      - name: Get latest Git tag
+            # - name: Get latest Git tag
+            #   id: version
+            #   run: |
+            #     TAG=$(git describe --tags --abbrev=0)
+            #     echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+      - name: Get timestamp + optional Git tag
         id: version
         run: |
-          TAG=$(git describe --tags --abbrev=0)
-          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+          DT=$(date -u +"%Y%m%d-%H%M%S")
+          TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          VERSION="v${DT}"
+          [ -n "$TAG" ] && VERSION="${VERSION}-${TAG}"
+          echo "tag=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
