@@ -36,24 +36,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
-            #- name: Get version tag
-            #  id: version
-            #  run: echo "tag=v$(date +%Y%m%d)-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-
-            #- name: Create GitHub Release
-            #  uses: softprops/action-gh-release@v2
-            #  with:
-            #    tag_name: ${{ steps.version.outputs.tag }}
-            #    files: dist/slides.pdf
-            #  env:
-            #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            
-            # - name: Get latest Git tag
-            #   id: version
-            #   run: |
-            #     TAG=$(git describe --tags --abbrev=0)
-            #     echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
-
       - name: Get timestamp + optional Git tag
         id: version
         run: |
@@ -68,7 +50,7 @@ jobs:
         with:
           tag_name: ${{ steps.version.outputs.tag }}
           files: dist/slides.pdf
-          draft: false            # ← Set `false` to publish immediately
-          prerelease: true        # ← Set `true` if tagging nightly builds
+          draft: true             # ← Set `false` to publish immediately
+          prerelease: false       # ← Set `true` if tagging nightly builds
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
