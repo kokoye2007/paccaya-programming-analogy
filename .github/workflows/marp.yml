@@ -22,8 +22,8 @@ jobs:
       - name: Export slides to HTML and PDF
         run: |
           mkdir dist
-          marp slides.md --html --output dist/index.html
-          marp slides.md --pdf --output dist/slides.pdf
+          marp SLIDES.md --html --output dist/index.html
+          marp SLIDES.md --pdf --output dist/slides.pdf
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
