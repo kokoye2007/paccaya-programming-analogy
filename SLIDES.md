@@ -8,7 +8,7 @@ footer: '© 2024 - Open Source Project'
 paginate: true
 style: |
   section {
-    font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Myanmar Sanpya", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 90%;
     line-height: 1.6;
     letter-spacing: 0.1px;
@@ -34,7 +34,7 @@ style: |
 
   /* Optional: Burmese font fallback */
   body {
-    font-family: "Noto Sans Myanmar", "Noto Sans", sans-serif;
+    font-family: "Myanmar Sanpya", "Noto Sans Myanmar", "Noto Sans", sans-serif;
   }
 
 ---
@@ -293,3 +293,5 @@ A Study of the 24 Patthana Conditions with Tech Analogies
 **GitHub:** `kokoye2007/paccaya-programming-analogy`
 
 **License:** Creative Commons (CC-BY-SA 4.0)
+
+**Font:** Myanmar Sanpya - Google (Apache License, Version 2.0)
