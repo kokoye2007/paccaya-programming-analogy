@@ -1,0 +1,60 @@
+name: Build and Deploy Marp Slides
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Export slides to HTML and PDF
+        run: |
+          mkdir dist
+          marp slides.md --html --output dist/index.html
+          marp slides.md --pdf --output dist/slides.pdf
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
+            #- name: Get version tag
+            #  id: version
+            #  run: echo "tag=v$(date +%Y%m%d)-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+            #- name: Create GitHub Release
+            #  uses: softprops/action-gh-release@v2
+            #  with:
+            #    tag_name: ${{ steps.version.outputs.tag }}
+            #    files: dist/slides.pdf
+            #  env:
+            #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            
+      - name: Get latest Git tag
+        id: version
+        run: |
+          TAG=$(git describe --tags --abbrev=0)
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          files: dist/slides.pdf
+          draft: false            # ← Set `false` to publish immediately
+          prerelease: true        # ← Set `true` if tagging nightly builds
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
