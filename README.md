@@ -42,6 +42,6 @@ This project is an open-source initiative to explain the profound concepts of th
 ဤအချက်အလက်များကို [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) ဖြင့် မျှဝေပါသည်။
 
 ---
-[View as a Slideshow](https://kokoye2007.github.io/paccaya-programming-analogy/) 
+[View as a Slideshow](https://kokoye2007.github.io/paccaya-programming-analogy/index.html) 
 
 <!-- You will need to create and export the slides.html from Marp -->

@@ -10,7 +10,7 @@ There are several ways you can contribute:
 
 If you find an error, a typo, or have a suggestion for a better analogy, the best way to let us know is by opening an **Issue**.
 
--   Go to the [Issues](https://github.com/your-username/your-repo-name/issues) tab.
+-   Go to the [Issues](https://github.com/kokoye2007/paccaya-programming-analogy/issues) tab.
 -   Click on "New Issue".
 -   Provide a clear title and a detailed description of the issue or suggestion.
 
