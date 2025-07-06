@@ -4,7 +4,7 @@ theme: uncover
 backgroundColor: #f0f0f0
 color: #333
 header: '၂၄ ပစ္စည်း နှင့် Programming Analogy'
-footer: '© 2024 - Open Source Project'
+footer: '© 2025 - Open Source Project'
 paginate: true
 style: |
   section {
