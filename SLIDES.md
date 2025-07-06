@@ -8,8 +8,35 @@ footer: '© 2024 - Open Source Project'
 paginate: true
 style: |
   section {
+    font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 90%;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
   }
+
+  h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+
+  ul {
+    margin-top: 0.5em;
+    padding-left: 1.4em;
+  }
+
+  li {
+    margin-bottom: 0.3em;
+  }
+
+  small {
+    font-size: 75%;
+  }
+
+  /* Optional: Burmese font fallback */
+  body {
+    font-family: "Noto Sans Myanmar", "Noto Sans", sans-serif;
+  }
+
 ---
 
 # **၂၄ ပစ္စည်း နှင့် Programming Analogy**
